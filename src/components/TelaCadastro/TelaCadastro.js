@@ -1,13 +1,13 @@
 import { Form, FormContainer, Input, StyledLabel, SendButton, BackToLoginButton } from "./styled";
 
 function TelaCadastro(props) {
-  const cadastrar = () => {
-    // fluxo de cadastro (ainda veremos)
-    props.mudarTela("TelaPrincipal")
-  }
 
   const mostrarTelaLogin = () => {
     props.mudarTela("TelaLogin")
+  }
+
+  const mostrarTelaEndereco = () => {
+    props.mudarTela("TelaCadastroEndereco")
   }
 
   return (
@@ -35,7 +35,7 @@ function TelaCadastro(props) {
           <Input id="descricao" />
         </StyledLabel>
 
-        <SendButton onClick={cadastrar}>Cadastrar</SendButton>
+        <SendButton onClick={mostrarTelaEndereco}>Cadastrar</SendButton>
 
         <BackToLoginButton onClick={mostrarTelaLogin}>Já possuo cadastro</BackToLoginButton>
       </Form>
